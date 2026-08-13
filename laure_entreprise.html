@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LAURE ENTREPRISE - Achat en ligne, produits cosmétiques et vêtements homme & femme.">
+  <title>LAURE ENTREPRISE | Votre style, votre beauté, votre choix.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C9A227',
+            cream: '#F8F3EA',
+            ink: '#171512'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Inter', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, Arial, sans-serif; }
+    .serif { font-family: "Playfair Display", Georgia, serif; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: .7s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .hero-bg {
+      background:
+        linear-gradient(90deg, rgba(17,15,12,.86) 0%, rgba(17,15,12,.60) 45%, rgba(17,15,12,.20) 100%),
+        url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=85") center/cover;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-ink">
+  <!-- NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
+    <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#accueil" class="flex items-center gap-3">
+        <span class="w-11 h-11 rounded-full bg-ink text-gold grid place-items-center font-bold">LE</span>
+        <span class="font-bold tracking-[.18em] text-sm sm:text-base">LAURE ENTREPRISE</span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <a href="#accueil" class="hover:text-gold transition">Accueil</a>
+        <a href="#produits" class="hover:text-gold transition">Nos produits</a>
+        <a href="#services" class="hover:text-gold transition">Services</a>
+        <a href="#apropos" class="hover:text-gold transition">À propos</a>
+        <a href="#contact" class="hover:text-gold transition">Contact</a>
+      </div>
+
+      <a href="https://wa.me/50944893660?text=Bonjour%20LAURE%20ENTREPRISE%2C%20je%20voudrais%20avoir%20plus%20d%27informations%20sur%20vos%20produits."
+         target="_blank" rel="noopener"
+         class="hidden sm:inline-flex bg-ink text-white px-5 py-3 rounded-full text-sm font-semibold hover:bg-gold hover:text-ink transition">
+        Commander sur WhatsApp
+      </a>
+
+      <button id="menuBtn" class="lg:hidden text-2xl" aria-label="Ouvrir le menu">☰</button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-5 py-5 space-y-4">
+      <a class="block" href="#accueil">Accueil</a>
+      <a class="block" href="#produits">Nos produits</a>
+      <a class="block" href="#services">Services</a>
+      <a class="block" href="#apropos">À propos</a>
+      <a class="block" href="#contact">Contact</a>
+      <a class="inline-flex bg-ink text-white px-5 py-3 rounded-full" href="https://wa.me/50944893660" target="_blank">Commander sur WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="accueil" class="hero-bg min-h-[760px] flex items-center pt-20">
+      <div class="max-w-7xl mx-auto w-full px-5 lg:px-8 py-24">
+        <div class="max-w-2xl text-white reveal">
+          <p class="uppercase tracking-[.3em] text-gold font-semibold text-sm mb-5">Mode • Beauté • Shopping</p>
+          <h1 class="serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05] font-semibold">
+            Découvrez votre style. <span class="text-gold">Révélez votre beauté.</span>
+          </h1>
+          <p class="mt-7 text-lg text-white/85 leading-8 max-w-xl">
+            LAURE ENTREPRISE vous propose une sélection soigneusement choisie de vêtements et de produits cosmétiques pour accompagner votre style et votre beauté au quotidien.
+          </p>
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="#produits" class="bg-gold text-ink px-7 py-4 rounded-full font-bold hover:bg-white transition">Découvrir nos produits</a>
+            <a href="https://wa.me/50944893660?text=Bonjour%20LAURE%20ENTREPRISE%2C%20je%20voudrais%20avoir%20plus%20d%27informations%20sur%20vos%20produits."
+               target="_blank" rel="noopener" class="border border-white/50 px-7 py-4 rounded-full font-bold hover:bg-white hover:text-ink transition">
+              Commander sur WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-cream">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <p class="text-gold font-bold uppercase tracking-[.25em] text-sm">Ce que nous proposons</p>
+          <h2 class="serif text-4xl sm:text-5xl mt-3">Nos services</h2>
+          <p class="mt-4 text-gray-600">Tout pour votre style, votre beauté et votre shopping, au même endroit.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <article class="bg-white p-7 rounded-3xl shadow-sm hover:-translate-y-2 transition reveal">
+            <div class="text-4xl">🛒</div>
+            <h3 class="font-bold text-xl mt-5">Achat en ligne</h3>
+            <p class="text-gray-600 mt-3 leading-7">Commandez facilement vos articles préférés depuis votre téléphone.</p>
+          </article>
+          <article class="bg-white p-7 rounded-3xl shadow-sm hover:-translate-y-2 transition reveal">
+            <div class="text-4xl">✨</div>
+            <h3 class="font-bold text-xl mt-5">Produits cosmétiques</h3>
+            <p class="text-gray-600 mt-3 leading-7">Découvrez notre sélection de produits pour prendre soin de votre beauté.</p>
+          </article>
+          <article class="bg-white p-7 rounded-3xl shadow-sm hover:-translate-y-2 transition reveal">
+            <div class="text-4xl">👔</div>
+            <h3 class="font-bold text-xl mt-5">Mode Homme</h3>
+            <p class="text-gray-600 mt-3 leading-7">Des vêtements tendance et élégants pour l'homme moderne.</p>
+          </article>
+          <article class="bg-white p-7 rounded-3xl shadow-sm hover:-translate-y-2 transition reveal">
+            <div class="text-4xl">👗</div>
+            <h3 class="font-bold text-xl mt-5">Mode Femme</h3>
+            <p class="text-gray-600 mt-3 leading-7">Des styles modernes et élégants pour mettre votre personnalité en valeur.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="produits" class="py-24">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 reveal">
+          <div>
+            <p class="text-gold font-bold uppercase tracking-[.25em] text-sm">Boutique</p>
+            <h2 class="serif text-4xl sm:text-5xl mt-3">Produits populaires</h2>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button class="filter-btn active px-4 py-2 rounded-full bg-ink text-white text-sm" data-filter="all">Tous</button>
+            <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 text-sm" data-filter="cosmetiques">Cosmétiques</button>
+            <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 text-sm" data-filter="homme">Homme</button>
+            <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 text-sm" data-filter="femme">Femme</button>
+          </div>
+        </div>
+
+        <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <article class="product-card group reveal" data-category="cosmetiques" data-name="Soin beauté premium">
+            <div class="rounded-3xl overflow-hidden bg-gray-100 aspect-[4/5]">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85" alt="Produits cosmétiques">
+            </div>
+            <h3 class="font-bold mt-5">Soin beauté premium</h3>
+            <p class="text-sm text-gray-500 mt-1">Cosmétiques</p>
+            <div class="flex justify-between items-center mt-3">
+              <span class="font-bold text-gold">Sur commande</span>
+              <button class="order-btn text-sm font-semibold underline" data-product="Soin beauté premium">Commander</button>
+            </div>
+          </article>
+
+          <article class="product-card group reveal" data-category="femme" data-name="Look femme élégant">
+            <div class="rounded-3xl overflow-hidden bg-gray-100 aspect-[4/5]">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85" alt="Mode femme">
+            </div>
+            <h3 class="font-bold mt-5">Look femme élégant</h3>
+            <p class="text-sm text-gray-500 mt-1">Mode femme</p>
+            <div class="flex justify-between items-center mt-3">
+              <span class="font-bold text-gold">Sur commande</span>
+              <button class="order-btn text-sm font-semibold underline" data-product="Look femme élégant">Commander</button>
+            </div>
+          </article>
+
+          <article class="product-card group reveal" data-category="homme" data-name="Look homme moderne">
+            <div class="rounded-3xl overflow-hidden bg-gray-100 aspect-[4/5]">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=900&q=85" alt="Mode homme">
+            </div>
+            <h3 class="font-bold mt-5">Look homme moderne</h3>
+            <p class="text-sm text-gray-500 mt-1">Mode homme</p>
+            <div class="flex justify-between items-center mt-3">
+              <span class="font-bold text-gold">Sur commande</span>
+              <button class="order-btn text-sm font-semibold underline" data-product="Look homme moderne">Commander</button>
+            </div>
+          </article>
+
+          <article class="product-card group reveal" data-category="cosmetiques" data-name="Collection glow">
+            <div class="rounded-3xl overflow-hidden bg-gray-100 aspect-[4/5]">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=900&q=85" alt="Collection beauté">
+            </div>
+            <h3 class="font-bold mt-5">Collection Glow</h3>
+            <p class="text-sm text-gray-500 mt-1">Cosmétiques</p>
+            <div class="flex justify-between items-center mt-3">
+              <span class="font-bold text-gold">Sur commande</span>
+              <button class="order-btn text-sm font-semibold underline" data-product="Collection Glow">Commander</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="apropos" class="py-24 bg-ink text-white">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+        <div class="rounded-[2rem] overflow-hidden reveal">
+          <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=85" alt="LAURE ENTREPRISE" class="w-full h-[500px] object-cover">
+        </div>
+        <div class="reveal">
+          <p class="text-gold font-bold uppercase tracking-[.25em] text-sm">À propos</p>
+          <h2 class="serif text-4xl sm:text-5xl mt-3">Une boutique pensée pour votre style.</h2>
+          <p class="text-white/70 leading-8 mt-6">
+            LAURE ENTREPRISE met l'accent sur une sélection élégante de vêtements et de produits cosmétiques, avec une expérience d'achat simple et accessible.
+          </p>
+          <div class="grid sm:grid-cols-3 gap-5 mt-9">
+            <div><div class="text-gold text-3xl">✓</div><p class="mt-2 font-semibold">Qualité</p></div>
+            <div><div class="text-gold text-3xl">✓</div><p class="mt-2 font-semibold">Confiance</p></div>
+            <div><div class="text-gold text-3xl">✓</div><p class="mt-2 font-semibold">Élégance</p></div>
+          </div>
+          <a href="#contact" class="inline-flex mt-9 bg-gold text-ink px-7 py-4 rounded-full font-bold hover:bg-white transition">En savoir plus</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center reveal">
+          <p class="text-gold font-bold uppercase tracking-[.25em] text-sm">Inspiration</p>
+          <h2 class="serif text-4xl sm:text-5xl mt-3">Notre univers</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+          <img class="rounded-3xl h-64 w-full object-cover reveal" src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=85" alt="Beauté">
+          <img class="rounded-3xl h-80 w-full object-cover reveal" src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=85" alt="Mode femme">
+          <img class="rounded-3xl h-80 w-full object-cover reveal" src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=800&q=85" alt="Mode homme">
+          <img class="rounded-3xl h-64 w-full object-cover reveal" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=85" alt="Shopping">
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24 bg-cream">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center reveal">
+          <p class="text-gold font-bold uppercase tracking-[.25em] text-sm">Avis clients</p>
+          <h2 class="serif text-4xl sm:text-5xl mt-3">Ce que nos clients disent</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mt-12">
+          <article class="bg-white p-7 rounded-3xl reveal">
+            <div class="text-gold">★★★★★</div>
+            <p class="mt-5 text-gray-600 leading-7">« Très belle expérience. La commande était simple et les produits correspondent parfaitement à mes attentes. »</p>
+            <p class="font-bold mt-6">— Cliente satisfaite</p>
+          </article>
+          <article class="bg-white p-7 rounded-3xl reveal">
+            <div class="text-gold">★★★★★</div>
+            <p class="mt-5 text-gray-600 leading-7">« J'aime beaucoup la sélection de vêtements. Les modèles sont élégants et modernes. »</p>
+            <p class="font-bold mt-6">— Client satisfait</p>
+          </article>
+          <article class="bg-white p-7 rounded-3xl reveal">
+            <div class="text-gold">★★★★★</div>
+            <p class="mt-5 text-gray-600 leading-7">« Service rapide et communication facile sur WhatsApp. Je recommande LAURE ENTREPRISE. »</p>
+            <p class="font-bold mt-6">— Cliente satisfaite</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14">
+        <div class="reveal">
+          <p class="text-gold font-bold uppercase tracking-[.25em] text-sm">Contact</p>
+          <h2 class="serif text-4xl sm:text-5xl mt-3">Parlons de votre prochaine commande.</h2>
+          <p class="text-gray-600 leading-8 mt-6">Une question sur un produit ? Écrivez-nous directement sur WhatsApp ou utilisez le formulaire.</p>
+          <a href="https://wa.me/50944893660?text=Bonjour%20LAURE%20ENTREPRISE%2C%20je%20voudrais%20avoir%20plus%20d%27informations%20sur%20vos%20produits."
+             target="_blank" rel="noopener" class="inline-flex mt-7 bg-ink text-white px-7 py-4 rounded-full font-bold hover:bg-gold hover:text-ink transition">
+            💬 WhatsApp : +509 4489-3660
+          </a>
+          <div class="flex gap-5 mt-8 text-sm">
+            <a href="#" aria-label="Facebook" class="hover:text-gold">Facebook</a>
+            <a href="#" aria-label="Instagram" class="hover:text-gold">Instagram</a>
+            <a href="#" aria-label="TikTok" class="hover:text-gold">TikTok</a>
+          </div>
+        </div>
+
+        <form id="contactForm" class="bg-cream p-7 sm:p-9 rounded-[2rem] reveal">
+          <div>
+            <label class="text-sm font-semibold">Nom</label>
+            <input required type="text" class="mt-2 w-full rounded-2xl border-0 px-5 py-4 outline-none focus:ring-2 focus:ring-gold" placeholder="Votre nom">
+          </div>
+          <div class="mt-5">
+            <label class="text-sm font-semibold">Email</label>
+            <input required type="email" class="mt-2 w-full rounded-2xl border-0 px-5 py-4 outline-none focus:ring-2 focus:ring-gold" placeholder="vous@email.com">
+          </div>
+          <div class="mt-5">
+            <label class="text-sm font-semibold">Téléphone</label>
+            <input type="tel" class="mt-2 w-full rounded-2xl border-0 px-5 py-4 outline-none focus:ring-2 focus:ring-gold" placeholder="+509 ...">
+          </div>
+          <div class="mt-5">
+            <label class="text-sm font-semibold">Message</label>
+            <textarea required rows="5" class="mt-2 w-full rounded-2xl border-0 px-5 py-4 outline-none focus:ring-2 focus:ring-gold" placeholder="Votre message..."></textarea>
+          </div>
+          <button class="mt-6 w-full bg-ink text-white py-4 rounded-2xl font-bold hover:bg-gold hover:text-ink transition" type="submit">Envoyer le message</button>
+          <p id="formMessage" class="hidden mt-4 text-sm font-semibold"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white py-12">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 grid md:grid-cols-3 gap-10">
+      <div>
+        <div class="font-bold tracking-[.18em]">LAURE ENTREPRISE</div>
+        <p class="text-white/60 mt-4 leading-7">Votre style, votre beauté, votre choix.</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Liens rapides</h3>
+        <div class="mt-4 space-y-2 text-white/60">
+          <a class="block hover:text-gold" href="#accueil">Accueil</a>
+          <a class="block hover:text-gold" href="#produits">Produits</a>
+          <a class="block hover:text-gold" href="#apropos">À propos</a>
+          <a class="block hover:text-gold" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-bold">Contact</h3>
+        <p class="text-white/60 mt-4">WhatsApp : +509 4489-3660</p>
+        <a class="inline-block mt-4 text-gold font-semibold" href="https://wa.me/50944893660" target="_blank">Nous écrire sur WhatsApp →</a>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 border-t border-white/10 mt-10 pt-6 text-sm text-white/50">
+      © 2026 LAURE ENTREPRISE — Tous droits réservés.
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/50944893660?text=Bonjour%20LAURE%20ENTREPRISE%2C%20je%20voudrais%20avoir%20plus%20d%27informations%20sur%20vos%20produits."
+     target="_blank" rel="noopener"
+     class="fixed right-5 bottom-5 z-50 w-16 h-16 rounded-full bg-[#25D366] text-white grid place-items-center shadow-2xl hover:scale-110 transition"
+     aria-label="Contacter LAURE ENTREPRISE sur WhatsApp">
+    <span class="text-3xl">☏</span>
+  </a>
+
+  <script>
+    // Menu mobile
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('#mobileMenu a').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Filtre produits
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const products = document.querySelectorAll('.product-card');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-ink', 'text-white', 'active');
+          b.classList.add('bg-gray-100');
+        });
+        btn.classList.add('bg-ink', 'text-white', 'active');
+        btn.classList.remove('bg-gray-100');
+
+        const filter = btn.dataset.filter;
+        products.forEach(product => {
+          product.style.display = (filter === 'all' || product.dataset.category === filter) ? '' : 'none';
+        });
+      });
+    });
+
+    // Commandes WhatsApp
+    document.querySelectorAll('.order-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const product = btn.dataset.product;
+        const message = `Bonjour LAURE ENTREPRISE, je souhaite commander : ${product}.`;
+        window.open(`https://wa.me/50944893660?text=${encodeURIComponent(message)}`, '_blank');
+      });
+    });
+
+    // Formulaire : ouverture WhatsApp avec le contenu
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fields = e.target.querySelectorAll('input, textarea');
+      const name = fields[0].value;
+      const email = fields[1].value;
+      const phone = fields[2].value;
+      const message = fields[3].value;
+
+      const text = `Bonjour LAURE ENTREPRISE,%0A%0ANom : ${name}%0AEmail : ${email}%0ATéléphone : ${phone}%0A%0AMessage : ${message}`;
+      window.open(`https://wa.me/50944893660?text=${text}`, '_blank');
+
+      const feedback = document.getElementById('formMessage');
+      feedback.textContent = 'Votre message est prêt à être envoyé sur WhatsApp.';
+      feedback.className = 'mt-4 text-sm font-semibold text-green-700';
+      e.target.reset();
+    });
+
+    // Animations au scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
